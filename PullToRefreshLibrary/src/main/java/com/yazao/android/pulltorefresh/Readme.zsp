@@ -1,0 +1,26 @@
+PullToRefreshLibrary 使用说明：
+
+1.在布局中使用如下：
+        <com.yuhj.ontheway.widget.PullToRefreshLayout
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/refresh_view"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" >
+
+              <include layout="@layout/refresh_head" />
+
+              <!-- 支持所有实现Pullable接口的View ，在这里 是如：listview gridview 需要实现Pullable接口-->
+              <!-- start替换控件-->
+              <com.yuhj.ontheway.widget.PullableListView
+                  android:id="@+id/jingxuan_listview"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:background="@color/white"
+                  android:divider="#ffffff"
+                  android:dividerHeight="5dp"
+                  android:paddingLeft="5dp"
+                  android:paddingRight="5dp" />
+              <!-- end 替换控件-->
+
+              <include layout="@layout/load_more" />
+          </com.yuhj.ontheway.widget.PullToRefreshLayout>
